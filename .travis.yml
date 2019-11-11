@@ -60,11 +60,11 @@ jobs:
         - ./gradlew inD
         - bash ./blade-mvc/build/install/*/bin/* &
         - wait_for 9000
-        - http :8080/api/json
-        - http :8080/api/html
-        - http :8080/api/text
-        - http :8080/
-        - http :8080/not-found
+        - http :9000/api/json
+        - http :9000/api/html
+        - http :9000/api/text
+        - http :9000/
+        - http :9000/not-found
         - stop_any 9000
 #    - stage: test
 #      name: kubectl integration test on k3d k3s k8s
