@@ -57,7 +57,7 @@ jobs:
       name: integration test
       script:
         - cd $TRAVIS_BUILD_DIR
-        - ./gradlew
+        - ./gradlew inD
         - bash ./blade-mvc/build/install/*/bin/* &
         - wait_for 9000
         - http :8080/api/json
